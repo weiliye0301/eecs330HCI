@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Get Evacuation Route</title>
+
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+<!--     <script >
+      function locate(){
+        document.getElementById("locate").value="822 Forest Ave";
+      }
+    </script> -->
+
+    <link href="css/shelter.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet" >
+     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <!-- <link rel="stylesheet" type="text/css" href=""> -->
+  </head>
+
+<body>
+
+  <header>
+<nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="evacuation.html">Evacuation Routes <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="save.html">Self Rescue</a>
+            </li>
+          </ul>
+        </nav>
+      <div class="blog-masthead">
+
+        <div class="container">
+
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-gray">
+      <!-- <a class="navbar-brand" href="#">Expand at sm</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="before">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item inactive">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Before</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+               <a class="dropdown-item" href="forecast.html">Hurricane Forecast</a>
+              <a class="dropdown-item" href="introduction.html">Introduction of Hurricane</a>
+              <a class="dropdown-item" href="prepare.html">Prepare Your Home</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="dropdown02" data-toggle="dropdown" style="color: white" aria-haspopup="true" aria-expanded="false">During</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="evacuation.html">Get Evacuation Routes</a>
+              <a class="dropdown-item" href="save.html">Self Rescue</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="dropdown02" aria-pressed="true" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">After</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+                   <a class="dropdown-item" href="after_construction.html">Recovery Instructions</a>
+              <a class="dropdown-item" href="shelter.html">Acquire Recovery Resource</a>
+              
+            </div>
+          </li>
+        </ul>
+       
+
+  <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <g:plusone></g:plusone>
+      </div>
+    </nav>
+         <!--  <nav class="nav nav-tabs">
+            <a class="nav-link " href="index.html">Home</a>
+            <a class="nav-link active" href="#">Introduction of Hurricane</a>
+            <a class="nav-link" href="forecast.html">Hurricane Forecast</a>
+            <a class="nav-link" href="prepare.html">Prepare Your Home</a>
+            <a class="nav-link" href="introduction.html">Before</a>
+
+            <a class="nav-link" href="#">During</a>
+            <a class="nav-link" href="after.html">After</a>
+          </nav> -->
+        </div>
+      </div>
+
+    </header>
+
+      <div class="blog-header">
+        <div class="container">
+          <h1 class="blog-title">GET</h1>
+          <h1 class="blog-title">EVACUATION</h1>
+          <h1 class="blog-title">ROUTES</h1>
+          <!-- <h1 class="blog-title"></h1> -->
+          <hr style="border:3px white solid;" >
+      <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" style="width: 450px;" id="locate" type="text" placeholder="Enter Your Address" aria-label="Search">
+           <a href="javascript:locater()" style="text-decoration: underline; color: black; " onmouseover="changeColor()" id="locate_button" onmouseout="resetColor()" >Locate Me</a>
+          <a  style="border-color:black; margin-left: 0.5rem; color:black" class="btn" type="button" onclick="passParameters()" >Get Routes</a>
+
+        </form>
+         <!-- <br> -->
+         
+          <!-- <br> -->
+          <p  id="intro" class="lead">
+            The evacuation route is shown based on your location and nearby safe zone. The traffic method is choosen as the car driving. You can use the suggestions to navigate along evacuation route.
+          </p>
+        <!-- <br> -->
+         <iframe
+        id="frame"
+        display="none"
+  width="1050"
+  height="600"
+  frameborder="0" style="border:0"
+  src="" allowfullscreen>
+</iframe>
+        </div>
+      </div>
+     <script src="js/evacuation.js"></script>
+     <script src = "js/print.js"></script>
+        <footer class="blog-footer">
+      <p>Website built by Wildbat.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</html>
